@@ -12,9 +12,13 @@ class Render {
         ctx.clearRect(0, 0, canvas.width, canvas.height)
     }
 
-    static fillCanvas(cavnas, ctx) {
+    static fillCanvas(canvas, ctx) {
         ctx.fillStyle = 'white'
         ctx.fillRect(0, 0, canvas.width, canvas.height)
         ctx.fillStyle = 'black'
+    }
+
+    static fillTextUI(ctx, text, pos) {
+        ctx.fillText(text, pos[0], pos[1])
     }
 }

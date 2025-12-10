@@ -1,6 +1,6 @@
 class UI {
     static title = {
-        textTitle: [],
+        textTitle: [20, 20],
         buttonStart: [],
         textStart: [],
         buttonLoad: [],
