@@ -1,9 +1,31 @@
 class Game {
     constructor() {
-
+        this.state = ''
+        this.canvas = document.getElementById('screen')
+        this.ctx = this.canvas.getContext('2d')
+        this.addEventlistener('mouseup', (event) => this.mouseUp(event), false)
     }
 
     run() {
-        
+        this.scene = new SceneTitle(this)
+        this.framePrevious = performance.now()
+        this.gameLoop = requestAnimationFrame(() => this.loop())
+    }
+
+    loop() {
+        this.frameCurrent = performance.now()
+        this.delta = this.frameCurrent - this.framePrevious
+        this.framePrevious = this.frameCurrent
+        this.gameLoop = requestAnimationFrame(() => this.loop())
+    }
+
+    mouseUp(event) {
+        let targetRect = this.canvas.getBoundingClientRect()
+        let pos = {
+            x: (event.clientX - targetRect.left) / targetRect.width * this.canvas.width,
+            y: (event.clientY - targetRect.top) / targetRect.height * this.canvas.height
+        }
+        let button = event.button
+        this.scene.mouseUp(this, pos, button)
     }
 }
