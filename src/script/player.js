@@ -3,8 +3,7 @@ class Player {
         this.life = 5
         this.gold = 0
         this.hand = []
-
         this.deckOriginal = []
-        this.deck = []
+        this.crystalOriginal = []
     }
 }

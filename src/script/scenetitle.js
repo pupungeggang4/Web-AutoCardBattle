@@ -28,10 +28,10 @@ class SceneTitle {
 
     mouseUp(game, pos, button) {
         if (button === 0) {
-            if (Util.pointInsideRectArray(pos, UI.title.buttonStart)) {
+            if (Util.pointInsideRectUI(pos, UI.title.buttonStart)) {
                 game.scene = new SceneBattle(game)
                 game.loaded = false
-            } else if (Util.pointInsideRectArray(pos, UI.title.buttonCollection)) {
+            } else if (Util.pointInsideRectUI(pos, UI.title.buttonCollection)) {
                 game.scene = new SceneCollection(game)
             }
         }

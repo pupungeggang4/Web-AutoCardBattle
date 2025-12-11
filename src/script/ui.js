@@ -18,7 +18,14 @@ class UI {
     }
 
     static menu = {
-
+        rect: [320, 200, 640, 320],
+        textPaused: [340, 220],
+        buttonResume: [320, 280, 640, 80],
+        textResume: [340, 300],
+        buttonSaveAndExit: [320, 360, 640, 80],
+        textSaveAndExit: [340, 380],
+        buttonSurrenderAndExit: [320, 440, 640, 80],
+        textSurrenderAndExit: [340, 460],
     }
 
     static collection = {

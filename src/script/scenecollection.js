@@ -18,7 +18,7 @@ class SceneCollection {
 
     mouseUp(game, pos, button) {
         if (button === 0) {
-            if (Util.pointInsideRectArray(pos, UI.collection.buttonBack)) {
+            if (Util.pointInsideRectUI(pos, UI.collection.buttonBack)) {
                 game.scene = new SceneTitle(game)
             }
         }
