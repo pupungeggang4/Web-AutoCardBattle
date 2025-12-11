@@ -1,5 +1,9 @@
 class Img {
     static loadPair = []
+    static loadPairCard = []
+    static loadPairCrystal = []
+    static card = {}
+    static crystal = {}
 }
 
 class Aud {
@@ -9,7 +13,7 @@ class Aud {
 class AssetLoader {
     static numLoaded = 0
     static loadAsset(callback) {
-        let numAssets = Img.loadPair.length + Aud.loadPair.length
+        let numAssets = Img.loadPair.length + Img.loadPairCard.length + Img.loadPairCrystal.length + Aud.loadPair.length
         if (AssetLoader.numLoaded >= numAssets) {
             callback()
         }
