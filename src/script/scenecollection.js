@@ -1,10 +1,6 @@
-class SceneBattle {
+class SceneCollection {
     constructor(game) {
-        if (game.loaded === false) {
-            game.state = 'shop'
-        }
 
-        game.menu = false
     }
 
     loop(game) {
@@ -17,11 +13,14 @@ class SceneBattle {
         Render.init(ctx)
         Render.clearCanvas(canvas, ctx)
         Render.fillCanvas(canvas, ctx)
-        Render.strokeRectUI(ctx, UI.collection.buttonBack)
+        Render.strokeRectUI(ctx, UI.battle.buttonMenu)
     }
 
     mouseUp(game, pos, button) {
         if (button === 0) {
+            if (Util.pointInsideRectArray(pos, UI.collection.buttonBack)) {
+                game.scene = new SceneTitle(game)
+            }
         }
     }
 }

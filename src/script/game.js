@@ -4,6 +4,12 @@ class Game {
         this.canvas = document.getElementById('screen')
         this.ctx = this.canvas.getContext('2d')
         this.canvas.addEventListener('mouseup', (event) => this.mouseUp(event), false)
+
+        this.loaded = false
+
+        this.battle = new Battle()
+        this.adventure = new Adventure()
+        this.player = new Player()
     }
 
     run() {
