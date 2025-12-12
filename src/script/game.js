@@ -1,5 +1,6 @@
 class Game {
     constructor() {
+        Data.loadData()
         this.state = ''
         this.canvas = document.getElementById('screen')
         this.ctx = this.canvas.getContext('2d')
@@ -10,6 +11,8 @@ class Game {
         this.battle = new Battle()
         this.adventure = new Adventure()
         this.player = new Player()
+
+        this.selectedNext = -1
     }
 
     run() {

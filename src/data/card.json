@@ -3,17 +3,17 @@ dataCard = {
     2: {"ID": 2, "name": "card 2", "type": "unit", "rarity": 0, "energy": 2, "stat": [2, 3]}
 }
 
-dataPlayed = { 
+dataCardPlayed = { 
     1: [],
     2: []
 }
 
-dataEffect = {
+dataCardEffect = {
     1: [],
     2: [],
 }
 
-dataDescription = {
+dataCardDescription = {
     1: [],
     2: []
 }

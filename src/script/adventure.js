@@ -33,6 +33,11 @@ class Adventure {
             }
         }
     }
+
+    startAdventure() {
+        this.generateLayout()
+        this.floor = 0
+    }
 }
 
 class AdventureShop {

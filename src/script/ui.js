@@ -17,6 +17,14 @@ class UI {
         buttonMenu: [1180, 20, 80, 80],
     }
 
+    static windowNext = {
+        rect: [160, 40, 960, 640],
+        textTitle: [180, 60],
+        item: [[200, 160, 240, 240], [520, 160, 240, 240], [840, 160, 240, 240]],
+        buttonStart: [560, 560, 160, 80],
+        textStart: [580, 580],
+    }
+
     static menu = {
         rect: [320, 200, 640, 320],
         textPaused: [340, 220],
