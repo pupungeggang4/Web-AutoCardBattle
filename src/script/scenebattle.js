@@ -26,6 +26,8 @@ class SceneBattle {
 
         if (game.state === 'next') {
             this.windowNext.render(game)
+        } else if (game.state === 'shop') {
+            Render.renderShop(game)
         }
 
         if (game.menu === true) {

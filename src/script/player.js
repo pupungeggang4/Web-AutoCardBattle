@@ -25,7 +25,7 @@ class Player {
             this.deckOriginal.push(card)
         }
         for (let i = 0; i < startCrystal.length; i++) {
-            let crystal = new Crystal
+            let crystal = new Crystal()
             crystal.setData(startCrystal[i])
             this.crystalOriginal.push(crystal)
         }

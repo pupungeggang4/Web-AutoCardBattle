@@ -3,7 +3,7 @@ class Card {
         this.ID = 0
         this.name = ''
         this.type = ''
-        this.rarity = 0
+        this.level = 0
         this.element = ''
         this.stat = [0, 0]
         this.played = []
@@ -19,7 +19,7 @@ class Card {
         this.ID = ID
         this.name = data['name']
         this.type = data['type']
-        this.rarity = data['rarity']
+        this.level = data['level']
         this.element = data['element']
         this.stat = data['stat']
         this.played = dataP
@@ -32,7 +32,7 @@ class Card {
         card.ID = this.ID
         card.name = this.name
         card.type = this.type
-        card.rarity = this.rarity
+        card.level = this.level
         card.element = this.element
         card.stat = JSON.parse(JSON.stringify(this.stat))
         card.played = JSON.parse(JSON.stringify(this.played))

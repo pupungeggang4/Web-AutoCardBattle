@@ -15,6 +15,28 @@ class UI {
 
     static battle = {
         buttonMenu: [1180, 20, 80, 80],
+        shop: {
+            iconPlayerGold: [20, 60],
+            textPlayerGold: [64, 64],
+            itemStart: [120, 20],
+            itemSize: [120, 120],
+            itemInterval: [120, 120],
+            textItemLevel: [124, 144],
+            iconItemGold: [160, 140],
+            textItemGold: [204, 144],
+
+            buttonReroll: [860, 20, 120, 120],
+            iconGoldReroll: [860, 140],
+            textGoldReroll: [904, 144],
+            buttonFreeze: [1000, 20, 120, 120],
+
+            textDeck: [24, 184],
+            deckInterval: [320, 40],
+            buttonDeckStart: [20, 220],
+            buttonDeckSize: [320, 40],
+            bookmarkStart: [300, 220],
+            textDeckStart: [24, 224],
+        }
     }
 
     static windowNext = {

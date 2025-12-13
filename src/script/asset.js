@@ -1,5 +1,9 @@
 class Img {
-    static loadPair = []
+    static loadPair = [
+        ['gold', 'asset/image/gold.png'],
+        ['buttonfreeze', 'asset/image/buttonfreeze.png'],
+        ['buttonreroll', 'asset/image/buttonreroll.png']
+    ]
     static loadPairCard = []
     static loadPairCrystal = []
     static card = {}
