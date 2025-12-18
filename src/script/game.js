@@ -11,6 +11,7 @@ class Game {
         this.battle = new Battle()
         this.adventure = new Adventure()
         this.player = new Player()
+        this.shop = new Shop()
 
         this.selectedNext = -1
     }

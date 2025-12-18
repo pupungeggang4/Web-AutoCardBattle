@@ -7,4 +7,8 @@ class Unit {
         this.attack = 0
         this.effect = []
     }
+
+    setFromCard(card) {
+        
+    }
 }

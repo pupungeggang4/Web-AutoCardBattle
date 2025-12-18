@@ -27,7 +27,7 @@ class SceneBattle {
         if (game.state === 'next') {
             this.windowNext.render(game)
         } else if (game.state === 'shop') {
-            Render.renderShop(game)
+            game.shop.render(game)
         }
 
         if (game.menu === true) {
@@ -43,6 +43,8 @@ class SceneBattle {
                 }
                 if (game.state === 'next') {
                     this.handleMouseNext(game, pos)
+                } else if (game.state === 'shop') {
+                    this.handleMouseShop(game, pos)
                 }
             } else {
                 if (Util.pointInsideRectUI(pos, UI.battle.buttonMenu)) {
@@ -67,6 +69,27 @@ class SceneBattle {
         if (Util.pointInsideRectUI(pos, UI.windowNext.buttonStart)) {
             if (game.selectedNext != -1) {
                 game.state = 'shop'
+                game.shop.reroll()
+                game.player.gold = 6
+            }
+        }
+    }
+
+    handleMouseShop(game, pos) {
+        let shop = game.shop
+        let player = game.player
+        for (let i = 0; i < 6; i++) {
+            let rect = [UI.battle.shop.itemStart[0] + UI.battle.shop.itemInterval[0] * i, UI.battle.shop.itemStart[1], UI.battle.shop.itemSize[0], UI.battle.shop.itemSize[1]]
+            if (Util.pointInsideRectUI(pos, rect)) {
+                if (shop.item[i] != null) {
+                    if (player.gold >= shop.item[i].gold) {
+                        player.gold -= shop.item[i].gold
+                        if (shop.item[i].content instanceof Card) {
+                            player.deckOriginal.push(shop.item[i].content)
+                        }
+                        shop.item[i] = null
+                    }
+                }
             }
         }
     }

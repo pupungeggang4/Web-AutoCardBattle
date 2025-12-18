@@ -16,6 +16,7 @@ class UI {
     static battle = {
         buttonMenu: [1180, 20, 80, 80],
         shop: {
+            textLevel: [20, 20],
             iconPlayerGold: [20, 60],
             textPlayerGold: [64, 64],
             itemStart: [120, 20],
